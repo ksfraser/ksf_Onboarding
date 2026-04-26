@@ -1,0 +1,23 @@
+{
+    "name": "ksfraser/ksf_onboarding",
+    "description": "KSF Onboarding Library",
+    "type": "library",
+    "license": "GPL-3.0",
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ksfraser\\Onboarding\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ksfraser\\Onboarding\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev"
+}
