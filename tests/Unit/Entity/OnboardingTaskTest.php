@@ -2,31 +2,59 @@
 
 declare(strict_types=1);
 
-namespace Ksfraser\Onboarding\Tests\Unit\Entity;
+namespace Ksfraser\Tests\Unit\Onboarding\Entity;
 
-use PHPUnit\Framework\TestCase;
 use Ksfraser\Onboarding\Entity\OnboardingTask;
+use PHPUnit\Framework\TestCase;
 
 class OnboardingTaskTest extends TestCase
 {
-    public function testCanCreateTask(): void
+    public function testDefaultValues(): void
     {
         $task = new OnboardingTask();
-        $this->assertInstanceOf(OnboardingTask::class, $task);
+
+        $this->assertNull($task->getId());
+        $this->assertSame(0, $task->getEmployeeId());
+        $this->assertSame('', $task->getTitle());
+        $this->assertSame('General', $task->getCategory());
+        $this->assertSame('pending', $task->getStatus());
+        $this->assertFalse($task->isCompleted());
     }
 
-    public function testCanSetAndGetEmployeeId(): void
+    /**
+     * @covers Ksfraser\Onboarding\Entity\OnboardingTask::setId
+     */
+    public function testSetId(): void
     {
         $task = new OnboardingTask();
-        $task->setEmployeeId(1);
-        $this->assertEquals(1, $task->getEmployeeId());
+        $result = $task->setId(1);
+
+        $this->assertInstanceOf(OnboardingTask::class, $result);
+        $this->assertSame(1, $task->getId());
     }
 
-    public function testCanCompleteTask(): void
+    /**
+     * @covers Ksfraser\Onboarding\Entity\OnboardingTask::setTitle
+     */
+    public function testSetTitle(): void
     {
         $task = new OnboardingTask();
-        $task->complete(5);
+        $result = $task->setTitle('Setup Laptop');
+
+        $this->assertInstanceOf(OnboardingTask::class, $result);
+        $this->assertSame('Setup Laptop', $task->getTitle());
+    }
+
+    /**
+     * @covers Ksfraser\Onboarding\Entity\OnboardingTask::isCompleted
+     */
+    public function testIsCompleted(): void
+    {
+        $task = new OnboardingTask();
+        $task->setStatus(OnboardingTask::STATUS_PENDING);
+        $this->assertFalse($task->isCompleted());
+
+        $task->setStatus(OnboardingTask::STATUS_COMPLETED);
         $this->assertTrue($task->isCompleted());
-        $this->assertEquals(5, $task->getCompletedBy());
     }
 }
