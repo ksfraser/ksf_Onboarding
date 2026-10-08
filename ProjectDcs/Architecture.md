@@ -15,7 +15,7 @@ ksf_Onboarding manages the employee onboarding process including task checklists
 
 ### 1.1 Namespace
 ```php
-Ksfraser\Onboarding\
+ksfraser\Onboarding\
 ```
 
 ### 1.2 Layer Pattern

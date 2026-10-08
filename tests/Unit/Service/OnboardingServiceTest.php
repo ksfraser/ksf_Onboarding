@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Ksfraser\Tests\Unit\Onboarding\Service;
+namespace ksfraser\Tests\Unit\Onboarding\Service;
 
-use Ksfraser\Onboarding\Entity\OnboardingPlan;
-use Ksfraser\Onboarding\Entity\OnboardingTask;
-use Ksfraser\Onboarding\Service\OnboardingService;
+use ksfraser\Onboarding\Entity\OnboardingPlan;
+use ksfraser\Onboarding\Entity\OnboardingTask;
+use ksfraser\Onboarding\Service\OnboardingService;
 use PHPUnit\Framework\TestCase;
 
 class OnboardingServiceTest extends TestCase
@@ -19,7 +19,7 @@ class OnboardingServiceTest extends TestCase
     }
 
     /**
-     * @covers Ksfraser\Onboarding\Service\OnboardingService::createPlan
+     * @covers ksfraser\Onboarding\Service\OnboardingService::createPlan
      */
     public function testCreatePlan(): void
     {
@@ -34,7 +34,7 @@ class OnboardingServiceTest extends TestCase
     }
 
     /**
-     * @covers Ksfraser\Onboarding\Service\OnboardingService::addTask
+     * @covers ksfraser\Onboarding\Service\OnboardingService::addTask
      */
     public function testAddTask(): void
     {
@@ -50,7 +50,7 @@ class OnboardingServiceTest extends TestCase
     }
 
     /**
-     * @covers Ksfraser\Onboarding\Service\OnboardingService::updateTaskStatus
+     * @covers ksfraser\Onboarding\Service\OnboardingService::updateTaskStatus
      */
     public function testUpdateTaskStatus(): void
     {
@@ -63,7 +63,7 @@ class OnboardingServiceTest extends TestCase
     }
 
     /**
-     * @covers Ksfraser\Onboarding\Service\OnboardingService::getProgress
+     * @covers ksfraser\Onboarding\Service\OnboardingService::getProgress
      */
     public function testGetProgress(): void
     {

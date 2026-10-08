@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Ksfraser\Tests\Unit\Onboarding\Entity;
+namespace ksfraser\Tests\Unit\Onboarding\Entity;
 
-use Ksfraser\Onboarding\Entity\OnboardingPlan;
+use ksfraser\Onboarding\Entity\OnboardingPlan;
 use PHPUnit\Framework\TestCase;
 
 class OnboardingPlanTest extends TestCase
@@ -20,7 +20,7 @@ class OnboardingPlanTest extends TestCase
     }
 
     /**
-     * @covers Ksfraser\Onboarding\Entity\OnboardingPlan::__construct
+     * @covers ksfraser\Onboarding\Entity\OnboardingPlan::__construct
      */
     public function testConstructWithData(): void
     {
@@ -37,7 +37,7 @@ class OnboardingPlanTest extends TestCase
     }
 
     /**
-     * @covers Ksfraser\Onboarding\Entity\OnboardingPlan::isCompleted
+     * @covers ksfraser\Onboarding\Entity\OnboardingPlan::isCompleted
      */
     public function testIsCompleted(): void
     {

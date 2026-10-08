@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Ksfraser\Onboarding\Service;
+namespace ksfraser\Onboarding\Service;
 
-use Ksfraser\Onboarding\Entity\OnboardingPlan;
-use Ksfraser\Onboarding\Entity\OnboardingTask;
+use ksfraser\Onboarding\Entity\OnboardingPlan;
+use ksfraser\Onboarding\Entity\OnboardingTask;
 
 class OnboardingService
 {

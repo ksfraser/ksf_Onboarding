@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Ksfraser\Tests\Unit\Onboarding\Entity;
+namespace ksfraser\Tests\Unit\Onboarding\Entity;
 
-use Ksfraser\Onboarding\Entity\OnboardingTask;
+use ksfraser\Onboarding\Entity\OnboardingTask;
 use PHPUnit\Framework\TestCase;
 
 class OnboardingTaskTest extends TestCase
@@ -22,7 +22,7 @@ class OnboardingTaskTest extends TestCase
     }
 
     /**
-     * @covers Ksfraser\Onboarding\Entity\OnboardingTask::setId
+     * @covers ksfraser\Onboarding\Entity\OnboardingTask::setId
      */
     public function testSetId(): void
     {
@@ -34,7 +34,7 @@ class OnboardingTaskTest extends TestCase
     }
 
     /**
-     * @covers Ksfraser\Onboarding\Entity\OnboardingTask::setTitle
+     * @covers ksfraser\Onboarding\Entity\OnboardingTask::setTitle
      */
     public function testSetTitle(): void
     {
@@ -46,7 +46,7 @@ class OnboardingTaskTest extends TestCase
     }
 
     /**
-     * @covers Ksfraser\Onboarding\Entity\OnboardingTask::isCompleted
+     * @covers ksfraser\Onboarding\Entity\OnboardingTask::isCompleted
      */
     public function testIsCompleted(): void
     {
